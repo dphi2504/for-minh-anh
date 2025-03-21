@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap to Change Text</title>
+    <title>For Minh Anh</title>
     <style>
         body {
             display: flex;
@@ -12,34 +12,19 @@
             height: 100vh;
             text-align: center;
             font-size: 24px;
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #0099ff, #6f00ff, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradientBG 10s infinite alternate;
             user-select: none;
             padding: 20px;
+            transition: background 0.5s;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
         }
     </style>
-</head>
-<body onclick="nextContent()">
-    <div id="content">"hi my bbi"</div>
-
-    <script>
-        const contents = [
-            '"hi my bbi"',
-            '"whenever i think"',
-            '"i\'m so stupid"',
-            '"and i can\'t be more stupid"',
-            '"that\'s the time"',
-            '"i did sth stupid x10 hm"',
-            '"im so sad"',
-            '"im so sorri"',
-            '"have a gud day bbi, see you and luv diu"'
-        ];
-
-        let index = 0;
-
-        function nextContent() {
-            index = (index + 1) % contents.length;
-            document.getElementById("content").innerText = contents[index];
-        }
-    </script>
-</body>
-</html>
+</head

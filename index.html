@@ -5,29 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Minh Anh</title>
     <style>
-            body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        font-size: 24px;
-        background: linear-gradient(-45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #0099ff, #6f00ff, #ff00ff);
-        background-size: 400% 400%;
-        animation: gradientBG 6s infinite alternate;
-        user-select: none;
-        padding: 20px;
-        color: white;
-        font-family: Arial, sans-serif;
-        font-weight: bold;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-size: 24px;
+            background: url('https://www.transparenttextures.com/patterns/bright-squares.png'), 
+                        linear-gradient(-45deg, #ff69b4, #ff4500, #ffeb00, #32cd32, #00fa9a, #008080, #6a5acd);
+            background-size: cover, 400% 400%;
+            animation: gradientBG 8s infinite alternate;
+            user-select: none;
+            padding: 20px;
+            color: white;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            border: 10px solid rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
 
-    @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
     </style>
-</head
+</head>
+<body>
+    <script>
+        const texts = [
+            "hi my bbi",
+            "whenever i think",
+            "i'm so stupid",
+            "and i can't be more stupid",
+            "that's the time",
+            "i did sth stupid x10 hm",
+            "im so sad",
+            "im so sorri",
+            "have a gud day bbi, see you and luv diu"
+        ];
+
+        let index = 0;
+        document.body.innerText = texts[index];
+
+        document.body.addEventListener("click", () => {
+            index = (index + 1) % texts.length;
+            document.body.innerText = texts[index];
+        });
+    </script>
+</body>
+</html>
